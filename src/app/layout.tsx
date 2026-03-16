@@ -1,62 +1,33 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
-import { justSans } from '@/styles/fonts';
-import '@/styles/globals.css';
-import { Metadata } from 'next';
+import { type Metadata } from 'next'
+
+import { Providers } from '@/app/providers'
+import { Layout } from '@/components/Layout'
+
+import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
-  title:
-    'Joaquim Costa | Cloud-Native Engineer & Java and Kotlin Backend Specialist',
-  description:
-    'Joaquim Costa is a Senior Software Engineer focused on building scalable cloud-native systems using Java, Kotlin, Spring Boot, and Azure. Explore tutorials, architecture patterns, and real-world microservices design.',
-  keywords: [
-    'Joaquim Costa',
-    'Cloud Native Engineer',
-    'Spring Boot',
-    'Kotlin Backend',
-    'Java Backend',
-    'Microservices Architecture',
-    'Azure DevOps',
-    'CI/CD',
-    'Kubernetes',
-  ],
-  authors: [{ name: 'Joaquim Costa', url: 'https://costacodecraft.com' }],
-  creator: 'Joaquim Costa',
-  openGraph: {
-    title:
-      'Joaquim Costa | Cloud-Native Engineer & Java and Kotlin Backend Specialist',
-    description:
-      'Scalable backend systems. DevOps automation. Real-world tutorials and architecture insights from Joaquim Costa.',
-    url: 'https://costacodecraft.com',
-    siteName: 'Costa Code Craft',
-    images: [
-      {
-        url: 'https://costacodecraft.com/og-banner.png', // optional: customize if you have a banner
-        width: 1200,
-        height: 630,
-        alt: 'Costa Code Craft Open Graph Banner',
-      },
-    ],
-    locale: 'en_US',
-    type: 'website',
+  title: {
+    template: '%s - Joaquim Costa',
+    default: 'Joaquim Costa - Staff Software Engineer',
   },
-  metadataBase: new URL('https://costacodecraft.com'),
-};
+  description:
+    "I'm Joaquim, a Staff Software Engineer with over a decade of experience building scalable backend systems using Java, Kotlin, and Spring Boot. I focus on microservices architecture, DevOps automation, and cloud-native design.",
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
-    <html lang='en'>
-      <body className={`${justSans.className} antialiased`}>
-        <div className='flex min-h-screen flex-col'>
-          <Header className='w-full' />
-          {children}
-          <Footer className='w-full' />
-        </div>
+    <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <body className="flex h-full bg-zinc-50 dark:bg-black">
+        <Providers>
+          <div className="flex w-full">
+            <Layout>{children}</Layout>
+          </div>
+        </Providers>
       </body>
     </html>
-  );
+  )
 }
