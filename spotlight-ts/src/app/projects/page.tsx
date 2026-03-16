@@ -3,47 +3,40 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoCostaCodeCraft from '@/images/logos/costacodecraft.svg'
+import logoGE from '@/images/logos/ge.svg'
+import logoKroger from '@/images/logos/kroger.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'costacodecraft',
     description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
-    logo: logoPlanetaria,
+      'My personal portfolio and blog — built with Next.js, Tailwind CSS, and TypeScript.',
+    link: {
+      href: 'https://github.com/joaquimscosta/costacodecraft',
+      label: 'github.com',
+    },
+    logo: logoCostaCodeCraft,
   },
   {
-    name: 'Animaginary',
+    name: 'GE Workflows Platform',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'Led the backend modernization of GE\'s internal Workflows platform from monolith to microservices, supporting high availability across the organization.',
+    link: {
+      href: '#',
+      label: 'Internal project',
+    },
+    logo: logoGE,
   },
   {
-    name: 'HelioStream',
+    name: 'Kroger Backend Services',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
-  },
-  {
-    name: 'cosmOS',
-    description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'Standardized backend architecture with RBAC security, OAuth2, Flyway migrations, and optimized CI/CD pipelines using GitHub Actions.',
+    link: {
+      href: '#',
+      label: 'Internal project',
+    },
+    logo: logoKroger,
   },
 ]
 
@@ -60,14 +53,15 @@ function LinkIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 
 export const metadata: Metadata = {
   title: 'Projects',
-  description: 'Things I’ve made trying to put my dent in the universe.',
+  description:
+    "Projects and systems I've built throughout my career in backend engineering.",
 }
 
 export default function Projects() {
   return (
     <SimpleLayout
-      title="Things I’ve made trying to put my dent in the universe."
-      intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+      title="Projects and systems I've built throughout my career."
+      intro="From enterprise platforms to open-source work, here are some of the projects I'm most proud of. Some are internal systems I've led, while others are open-source and available on GitHub."
     >
       <ul
         role="list"

@@ -6,9 +6,7 @@ import clsx from 'clsx'
 import { Container } from '@/components/Container'
 import {
   GitHubIcon,
-  InstagramIcon,
   LinkedInIcon,
-  XIcon,
 } from '@/components/SocialIcons'
 import portraitImage from '@/images/portrait.jpg'
 
@@ -50,7 +48,7 @@ function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'I’m Spencer Sharp. I live in New York City, where I design the future.',
+    "I'm Joaquim Costa, a Staff Software Engineer based in Rhode Island.",
 }
 
 export default function About() {
@@ -69,58 +67,80 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            I’m Spencer Sharp. I live in New York City, where I design the
-            future.
+            I&apos;m Joaquim Costa. I build scalable backend systems from Rhode
+            Island.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I’ve loved making things for as long as I can remember, and wrote
-              my first program when I was 6 years old, just two weeks after my
-              mom brought home the brand new Macintosh LC 550 that I taught
-              myself to type on.
+              I&apos;m a Staff Software Engineer with over 13 years of experience
+              designing and building secure, cloud-native backend systems. I
+              specialize in Java, Kotlin, and Spring Boot, with a strong focus on
+              microservices architecture, API design, and DevOps automation.
             </p>
             <p>
-              The only thing I loved more than computers as a kid was space.
-              When I was 8, I climbed the 40-foot oak tree at the back of our
-              yard while wearing my older sister’s motorcycle helmet, counted
-              down from three, and jumped — hoping the tree was tall enough that
-              with just a bit of momentum I’d be able to get to orbit.
+              I played a leading role at <strong>General Electric</strong> where
+              I steadily advanced to Staff Software Engineer, earning multiple
+              promotions based on impact. As the backend lead for the company&apos;s
+              internal &quot;Workflows&quot; platform — one of the most widely used systems
+              across the organization — I collaborated on modernizing the
+              application from a monolith to microservices, designing and
+              delivering robust backend solutions that supported high
+              availability and scalability. My work included leading technical
+              design, optimizing performance, and implementing infrastructure
+              improvements such as Docker-based local development environments
+              and CI/CD pipelines.
             </p>
             <p>
-              I spent the next few summers indoors working on a rocket design,
-              while I recovered from the multiple surgeries it took to fix my
-              badly broken legs. It took nine iterations, but when I was 15 I
-              sent my dad’s Blackberry into orbit and was able to transmit a
-              photo back down to our family computer from space.
+              At <strong>Kroger</strong>, I standardized backend architecture,
+              implemented RBAC security using OAuth2, and optimized CI/CD
+              workflows with GitHub Actions. I led code review practices and
+              championed OpenAPI adoption to align service development with
+              platform-wide standards.
             </p>
             <p>
-              Today, I’m the founder of Planetaria, where we’re working on
-              civilian space suits and manned shuttle kits you can assemble at
-              home so that the next generation of kids really <em>can</em> make
-              it to orbit — from the comfort of their own backyards.
+              My time at <strong>Capgemini</strong> gave me exposure to
+              client-facing enterprise projects where I achieved a 40%
+              improvement in API response times through strategic refactoring and
+              caching. Earlier in my career at{' '}
+              <strong>General Dynamics Mission Systems</strong>, I worked on key
+              management and public key infrastructure products securing millions
+              of devices.
+            </p>
+            <p>
+              Over the past several years, I&apos;ve worked extensively in Azure
+              (including AKS) and have also been diving into Generative AI, LLMs,
+              and agentic systems — especially where they intersect with backend
+              development, developer tooling, and automation workflows.
+            </p>
+            <p>
+              Outside of engineering, I enjoy traveling, automating my home,
+              playing soccer (futebol), and dancing. I&apos;m based in Rhode Island
+              and always open to collaboration, mentoring, and solving meaningful
+              technical challenges.
             </p>
           </div>
         </div>
         <div className="lg:pl-20">
           <ul role="list">
-            <SocialLink href="#" icon={XIcon}>
-              Follow on X
-            </SocialLink>
-            <SocialLink href="#" icon={InstagramIcon} className="mt-4">
-              Follow on Instagram
-            </SocialLink>
-            <SocialLink href="#" icon={GitHubIcon} className="mt-4">
+            <SocialLink
+              href="https://github.com/joaquimscosta"
+              icon={GitHubIcon}
+            >
               Follow on GitHub
             </SocialLink>
-            <SocialLink href="#" icon={LinkedInIcon} className="mt-4">
+            <SocialLink
+              href="https://www.linkedin.com/in/joaquimscosta"
+              icon={LinkedInIcon}
+              className="mt-4"
+            >
               Follow on LinkedIn
             </SocialLink>
             <SocialLink
-              href="mailto:spencer@planetaria.tech"
+              href="mailto:jscosta88@gmail.com"
               icon={MailIcon}
               className="mt-8 border-t border-zinc-100 pt-8 dark:border-zinc-700/40"
             >
-              spencer@planetaria.tech
+              jscosta88@gmail.com
             </SocialLink>
           </ul>
         </div>

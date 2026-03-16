@@ -36,85 +36,95 @@ function Tool({
 
 export const metadata = {
   title: 'Uses',
-  description: 'Software I use, gadgets I love, and other things I recommend.',
+  description:
+    'Tools I use, languages I work with, and infrastructure I build on.',
 }
 
 export default function Uses() {
   return (
     <SimpleLayout
-      title="Software I use, gadgets I love, and other things I recommend."
-      intro="I get asked a lot about the things I use to build software, stay productive, or buy to fool myself into thinking I’m being productive when I’m really just procrastinating. Here’s a big list of all of my favorite stuff."
+      title="Tools I use, languages I work with, and infrastructure I build on."
+      intro="Here's an overview of the technologies and tools that power my day-to-day work as a backend engineer."
     >
       <div className="space-y-20">
-        <ToolsSection title="Workstation">
-          <Tool title="16” MacBook Pro, M1 Max, 64GB RAM (2021)">
-            I was using an Intel-based 16” MacBook Pro prior to this and the
-            difference is night and day. I’ve never heard the fans turn on a
-            single time, even under the incredibly heavy loads I put it through
-            with our various launch simulations.
+        <ToolsSection title="Languages & Frameworks">
+          <Tool title="Java & Kotlin">
+            My primary languages for over a decade. I use them daily for building
+            microservices, APIs, and backend systems with Spring Boot and Spring
+            Cloud.
           </Tool>
-          <Tool title="Apple Pro Display XDR (Standard Glass)">
-            The only display on the market if you want something HiDPI and
-            bigger than 27”. When you’re working at planetary scale, every pixel
-            you can get counts.
+          <Tool title="Spring Boot & Spring Cloud">
+            The backbone of most systems I build. From REST APIs to event-driven
+            microservices, Spring Boot is my go-to framework for production-grade
+            Java/Kotlin applications.
           </Tool>
-          <Tool title="IBM Model M SSK Industrial Keyboard">
-            They don’t make keyboards the way they used to. I buy these any time
-            I see them go up for sale and keep them in storage in case I need
-            parts or need to retire my main.
-          </Tool>
-          <Tool title="Apple Magic Trackpad">
-            Something about all the gestures makes me feel like a wizard with
-            special powers. I really like feeling like a wizard with special
-            powers.
-          </Tool>
-          <Tool title="Herman Miller Aeron Chair">
-            If I’m going to slouch in the worst ergonomic position imaginable
-            all day, I might as well do it in an expensive chair.
+          <Tool title="Python">
+            I use Python for scripting, automation, and increasingly for AI/ML
+            experiments with LLMs and agentic workflows.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Development tools">
-          <Tool title="Sublime Text 4">
-            I don’t care if it’s missing all of the fancy IDE features everyone
-            else relies on, Sublime Text is still the best text editor ever
-            made.
+        <ToolsSection title="Cloud & Infrastructure">
+          <Tool title="Azure">
+            My primary cloud platform. I&apos;ve worked extensively with Azure
+            services including AKS, Cosmos DB, Azure DevOps, and Azure AI
+            Services. I hold multiple Azure certifications.
           </Tool>
-          <Tool title="iTerm2">
-            I’m honestly not even sure what features I get with this that aren’t
-            just part of the macOS Terminal but it’s what I use.
+          <Tool title="Docker & Kubernetes">
+            Essential for containerized deployments. I use Docker for local
+            development environments and Kubernetes (AKS) for production
+            orchestration.
           </Tool>
-          <Tool title="TablePlus">
-            Great software for working with databases. Has saved me from
-            building about a thousand admin interfaces for my various projects
-            over the years.
+          <Tool title="Terraform & Bicep">
+            Infrastructure as code tools I use for provisioning and managing
+            cloud resources reproducibly.
           </Tool>
-        </ToolsSection>
-        <ToolsSection title="Design">
-          <Tool title="Figma">
-            We started using Figma as just a design tool but now it’s become our
-            virtual whiteboard for the entire company. Never would have expected
-            the collaboration features to be the real hook.
+          <Tool title="GitHub Actions">
+            My CI/CD platform of choice. I design workflows for module-specific
+            builds, automated testing, and deployment pipelines.
           </Tool>
         </ToolsSection>
-        <ToolsSection title="Productivity">
-          <Tool title="Alfred">
-            It’s not the newest kid on the block but it’s still the fastest. The
-            Sublime Text of the application launcher world.
+        <ToolsSection title="Databases">
+          <Tool title="PostgreSQL">
+            My go-to relational database for most projects. I use it with
+            Flyway for schema migrations and Spring Data JPA for persistence.
           </Tool>
-          <Tool title="Reflect">
-            Using a daily notes system instead of trying to keep things
-            organized by topics has been super powerful for me. And with
-            Reflect, it’s still easy for me to keep all of that stuff
-            discoverable by topic even though all of my writing happens in the
-            daily note.
+          <Tool title="Redis">
+            For caching, session management, and high-throughput data scenarios
+            where low latency matters.
           </Tool>
-          <Tool title="SavvyCal">
-            Great tool for scheduling meetings while protecting my calendar and
-            making sure I still have lots of time for deep work during the week.
+          <Tool title="Azure Cosmos DB & MongoDB">
+            For document-oriented data models and globally distributed
+            applications. I hold the Azure Cosmos DB Developer Specialty
+            certification.
           </Tool>
-          <Tool title="Focus">
-            Simple tool for blocking distracting websites when I need to just do
-            the work and get some momentum going.
+        </ToolsSection>
+        <ToolsSection title="Development Tools">
+          <Tool title="IntelliJ IDEA">
+            My primary IDE for Java and Kotlin development. The refactoring
+            tools and Spring Boot integration are unmatched.
+          </Tool>
+          <Tool title="VS Code & Cursor">
+            For TypeScript, Python, and general-purpose editing. Cursor&apos;s AI
+            features have been a game-changer for productivity.
+          </Tool>
+          <Tool title="iTerm2 + Zsh + Oh My Zsh">
+            My terminal setup. Combined with custom aliases and plugins, it
+            makes navigating projects and running commands efficient.
+          </Tool>
+          <Tool title="SDKMAN, nvm, pyenv">
+            Version managers for Java/Kotlin (SDKMAN), Node.js (nvm), and
+            Python (pyenv). Essential for managing multiple projects with
+            different runtime versions.
+          </Tool>
+        </ToolsSection>
+        <ToolsSection title="Build & Package">
+          <Tool title="Maven & Gradle">
+            Build tools for JVM projects. I use Maven for most Spring Boot
+            projects and Gradle when more flexibility is needed.
+          </Tool>
+          <Tool title="pnpm">
+            My preferred package manager for JavaScript/TypeScript projects.
+            Fast, disk-efficient, and strict about dependency resolution.
           </Tool>
         </ToolsSection>
       </div>
