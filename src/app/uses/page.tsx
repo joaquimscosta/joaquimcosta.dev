@@ -64,19 +64,19 @@ export default function Uses() {
           </Tool>
         </ToolsSection>
         <ToolsSection title="Cloud & Infrastructure">
-          <Tool title="Azure">
-            My primary cloud platform. I&apos;ve worked extensively with Azure
-            services including AKS, Cosmos DB, Azure DevOps, and Azure AI
-            Services. I hold multiple Azure certifications.
+          <Tool title="Azure & Google Cloud">
+            My primary cloud platforms. On Azure I work with AKS, Cosmos DB,
+            Azure DevOps, and Azure AI Services. On GCP I use Cloud Run, GKE,
+            and Cloud Build. I hold multiple Azure certifications.
           </Tool>
           <Tool title="Docker & Kubernetes">
             Essential for containerized deployments. I use Docker for local
-            development environments and Kubernetes (AKS) for production
+            development environments and Kubernetes (AKS, GKE) for production
             orchestration.
           </Tool>
-          <Tool title="Terraform & Bicep">
-            Infrastructure as code tools I use for provisioning and managing
-            cloud resources reproducibly.
+          <Tool title="Terraform">
+            My infrastructure as code tool for provisioning and managing cloud
+            resources across Azure and GCP reproducibly.
           </Tool>
           <Tool title="GitHub Actions">
             My CI/CD platform of choice. I design workflows for module-specific
@@ -103,17 +103,18 @@ export default function Uses() {
             My primary IDE for Java and Kotlin development. The refactoring
             tools and Spring Boot integration are unmatched.
           </Tool>
-          <Tool title="VS Code & Cursor">
-            For TypeScript, Python, and general-purpose editing. Cursor&apos;s AI
-            features have been a game-changer for productivity.
+          <Tool title="VS Code & Claude Code">
+            VS Code is my editor for TypeScript, Python, and general-purpose
+            work. Claude Code is my AI-powered CLI for autonomous coding tasks,
+            code review, and rapid prototyping.
           </Tool>
           <Tool title="iTerm2 + Zsh + Oh My Zsh">
             My terminal setup. Combined with custom aliases and plugins, it
             makes navigating projects and running commands efficient.
           </Tool>
-          <Tool title="SDKMAN, nvm, pyenv">
+          <Tool title="SDKMAN, nvm, uv">
             Version managers for Java/Kotlin (SDKMAN), Node.js (nvm), and
-            Python (pyenv). Essential for managing multiple projects with
+            Python (uv). Essential for managing multiple projects with
             different runtime versions.
           </Tool>
         </ToolsSection>

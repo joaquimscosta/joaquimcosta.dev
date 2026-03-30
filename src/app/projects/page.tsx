@@ -13,7 +13,7 @@ const projects = [
     description:
       'My personal portfolio and blog — built with Next.js, Tailwind CSS, and TypeScript.',
     link: {
-      href: 'https://github.com/joaquimscosta/costacodecraft',
+      href: 'https://github.com/joaquimscosta/joaquimcosta.dev',
       label: 'github.com',
     },
     logo: logoCostaCodeCraft,

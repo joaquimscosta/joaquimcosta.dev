@@ -61,10 +61,12 @@ export default function About() {
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
-              I&apos;m a Staff Software Engineer with over 13 years of experience
-              designing and building secure, cloud-native backend systems. I
-              specialize in Java, Kotlin, and Spring Boot, with a strong focus on
-              microservices architecture, API design, and DevOps automation.
+              I believe great backend systems should be invisible — reliable
+              enough that no one thinks about them and fast enough that no one
+              complains. That belief has driven 13+ years of designing and
+              building secure, cloud-native systems in Java, Kotlin, and Spring
+              Boot, with a focus on microservices architecture, API design, and
+              DevOps automation.
             </p>
             <p>
               I played a leading role at <strong>General Electric</strong> where
@@ -103,9 +105,7 @@ export default function About() {
             </p>
             <p>
               Outside of engineering, I enjoy traveling, automating my home,
-              playing soccer (futebol), and dancing. I&apos;m based in Rhode Island
-              and always open to collaboration, mentoring, and solving meaningful
-              technical challenges.
+              playing soccer (futebol), and dancing. I&apos;m based in Rhode Island.
             </p>
           </div>
         </div>

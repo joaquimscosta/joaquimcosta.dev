@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: 'Joaquim Costa - Staff Software Engineer',
   },
   description:
-    "I'm Joaquim, a Staff Software Engineer with over a decade of experience building scalable backend systems using Java, Kotlin, and Spring Boot. I focus on microservices architecture, DevOps automation, and cloud-native design.",
+    "I'm Joaquim, a Staff Software Engineer with 13+ years of experience building scalable backend systems using Java, Kotlin, and Spring Boot. I focus on microservices, DevOps automation, and cloud-native architecture.",
   openGraph: {
     title: 'Joaquim Costa - Staff Software Engineer',
     description:
@@ -37,6 +37,34 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Joaquim Costa',
+              url: 'https://joaquimcosta.dev',
+              jobTitle: 'Staff Software Engineer',
+              worksFor: { '@type': 'Organization', name: 'Kroger' },
+              sameAs: [
+                'https://github.com/joaquimscosta',
+                'https://www.linkedin.com/in/joaquimscosta',
+              ],
+              knowsAbout: [
+                'Java',
+                'Kotlin',
+                'Spring Boot',
+                'Microservices',
+                'Cloud-Native Architecture',
+                'Azure',
+                'Kubernetes',
+              ],
+            }),
+          }}
+        />
+      </head>
       <body className="flex h-full bg-zinc-50 dark:bg-black">
         <Providers>
           <div className="flex w-full">

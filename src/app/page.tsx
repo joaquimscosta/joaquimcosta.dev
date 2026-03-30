@@ -222,15 +222,14 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 sm:text-5xl dark:text-zinc-100">
-            Staff Software Engineer, backend specialist, and cloud-native
-            enthusiast.
+            Staff Software Engineer who builds scalable backend systems that
+            ship fast.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I&apos;m Joaquim, a Staff Software Engineer with over a decade of
-            experience building scalable, high-performance backend systems using
-            Java, Kotlin, and Spring Boot. I focus on microservices architecture,
-            DevOps automation, and cloud-native design to help teams ship
-            reliable software — fast.
+            I&apos;m Joaquim — 13+ years turning complex backend challenges into
+            clean, reliable systems. Java, Kotlin, Spring Boot, and cloud-native
+            architecture are my daily tools. I focus on microservices, DevOps
+            automation, and helping teams deliver with confidence.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
