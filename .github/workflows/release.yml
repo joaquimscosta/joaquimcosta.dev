@@ -1,62 +1,15 @@
 name: Release
 on:
   push:
-    tags:
-      - 'v*'
     branches:
       - main
   pull_request:
 permissions:
-  id-token: write
   contents: read
-  packages: write
   security-events: write
   pull-requests: write
 
 jobs:
-  set-environment:
-    name: Set Environment Type
-    runs-on: ubuntu-latest
-    outputs:
-      environment: ${{ steps.set-env.outputs.environment }}
-    steps:
-    - name: Determine Environment Type
-      id: set-env
-      run: |
-        if [[ "$GITHUB_REF" == refs/tags/v* ]]; then
-          echo "environment=production" >> $GITHUB_OUTPUT
-        elif [[ "$GITHUB_REF" == "refs/heads/main" ]]; then
-          echo "environment=staging" >> $GITHUB_OUTPUT
-        else
-          echo "environment=development" >> $GITHUB_OUTPUT
-        fi
   build:
     name: Build and Lint
     uses: ./.github/workflows/development.yml
-
-  docker:
-    name: Docker
-    uses: ./.github/workflows/docker.yml
-    needs: [set-environment]
-    with:
-      environment: ${{ needs.set-environment.outputs.environment }}
-      registry: ghcr.io
-      image_name: joaquimscosta/costacodecraft-ui
-  
-  terraform-plan:
-    name: Terraform Plan
-    uses: ./.github/workflows/terraform-plan.yml
-    needs: [docker]
-    if: needs.docker.outputs.environment == 'production'
-    with:
-      docker_image: ${{ needs.docker.outputs.DOCKER_IMAGE }}
-    secrets: inherit
-  
-  terraform-apply:
-    name: Terraform Apply
-    uses: ./.github/workflows/terraform-apply.yml
-    needs: [docker, terraform-plan]
-    with:
-      docker_image: ${{ needs.docker.outputs.DOCKER_IMAGE }}
-    secrets: inherit
- 
