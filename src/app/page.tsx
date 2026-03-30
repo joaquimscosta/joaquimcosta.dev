@@ -174,14 +174,13 @@ function Resume() {
         ))}
       </ol>
       <Button
-        href="https://www.linkedin.com/in/joaquimscosta"
+        href="/resume.pdf"
         variant="secondary"
         className="group mt-6 w-full"
-        target="_blank"
-        rel="noopener noreferrer"
+        download
       >
-        View LinkedIn
-        <LinkedInIcon className="h-4 w-4 fill-zinc-400 transition group-hover:fill-zinc-500 dark:group-hover:fill-zinc-50" />
+        Download Resume
+        <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
   )
