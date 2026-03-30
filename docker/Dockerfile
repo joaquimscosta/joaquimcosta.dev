@@ -13,7 +13,7 @@ FROM base AS builder
 WORKDIR /app
 
 # Copy config files
-COPY package.json package-lock.json tsconfig.json next.config.ts ./
+COPY package.json package-lock.json tsconfig.json next.config.mjs ./
 COPY --from=deps /app/node_modules ./node_modules
 
 # Copy source code
