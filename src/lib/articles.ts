@@ -1,3 +1,4 @@
+import { cache } from 'react'
 import glob from 'fast-glob'
 
 interface Article {
@@ -25,7 +26,7 @@ async function importArticle(
   }
 }
 
-export async function getAllArticles() {
+export const getAllArticles = cache(async () => {
   const articleFilenames = await glob('*/page.mdx', {
     cwd: './src/app/articles',
   })
@@ -33,4 +34,4 @@ export async function getAllArticles() {
   const articles = await Promise.all(articleFilenames.map(importArticle))
 
   return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
-}
+})
