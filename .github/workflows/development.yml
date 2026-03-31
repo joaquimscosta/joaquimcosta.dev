@@ -1,0 +1,39 @@
+name: Development
+on:
+  push:
+  pull_request:
+
+  workflow_call:
+jobs:
+  build:
+    name: Build application
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: 'Install npm@latest'
+        run: npm i -g npm@latest
+      - name: '📦 Install dependencies'
+        uses: bahmutov/npm-install@v1
+      - name: '⚙️ Run build'
+        run: npm run build --if-present
+    # - run: npm test
+  lint:
+    name: Code standards
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: 'Setup Node.js'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.x'
+      - name: 'Install npm@latest'
+        run: npm i -g npm@latest
+      - name: '📦 Install dependencies'
+        uses: bahmutov/npm-install@v1
+
+      - name: '👀 Lint code'
+        run: npm run lint --if-present
