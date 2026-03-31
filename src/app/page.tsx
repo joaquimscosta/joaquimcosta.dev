@@ -191,12 +191,19 @@ function Photos() {
 
   return (
     <div className="mt-16 sm:mt-20">
-      <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
+      <div
+        role="region"
+        aria-label="Photo gallery"
+        className="-my-4 flex gap-5 overflow-x-auto px-4 py-4 snap-x snap-mandatory [scrollbar-width:none] [&::-webkit-scrollbar]:hidden [overscroll-behavior-x:contain] lg:justify-center lg:overflow-hidden lg:gap-8 lg:px-0"
+      >
         {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
           <div
             key={image.src}
+            role="group"
+            aria-roledescription="slide"
+            aria-label={`Photo ${imageIndex + 1} of 5`}
             className={clsx(
-              'relative aspect-9/10 w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
+              'relative aspect-9/10 w-44 flex-none snap-center [scroll-snap-stop:always] overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800',
               rotations[imageIndex % rotations.length],
             )}
           >
