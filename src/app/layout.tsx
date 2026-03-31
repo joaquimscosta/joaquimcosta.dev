@@ -38,6 +38,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full antialiased" suppressHydrationWarning>
       <head>
+        <link rel="preconnect" href="https://github.com" />
+        <link rel="preconnect" href="https://linkedin.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
